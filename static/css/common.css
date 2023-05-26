@@ -1,0 +1,239 @@
+
+:root {
+    --black: #141414;
+    --lighter-black:#202020;
+    --darker-gray:#41454d;
+	--gray: #6B7280;
+    --darker-light: #d3d3d3;
+	--light: #e6edf3;
+
+    --header-blue:#215068;
+    --black-background: #1f1f22;
+    --story-background: #2b3138;
+    --input-bg: #36414d;
+
+    --gray-btn: #4e4e4e;
+    --red-btn: #a12525;
+    --blue-btn: #224a8a;
+
+    --btn-icon: #eeeeee;
+    --edit-btn: #14455e;
+    --dlt-btn: #b91313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 100%;
+}
+
+body{
+    background-color: var(--black-background);
+    color: var(--light);
+}
+
+header{
+    height: 47.5px;
+    background-color: var(--header-blue);
+    font-size: 14px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+}
+
+header .title{
+    padding: 10px 30px;
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+header .page-name{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    background-color: #00000018;
+    min-width: 130px;
+}
+
+header .page-name-text{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.show{
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+.selectable{
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.selectable:hover{
+    filter:  brightness(118%) drop-shadow(0 0 3.5px #575b63b0);
+}
+
+.container{
+    background-color: var(--story-background);
+    border: thin solid var(--gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.225);
+}
+
+
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+}
+
+.btn {
+    color: var(--light);
+    padding:7px 8px;
+    cursor: pointer;
+    border: none;
+    font-size:medium;
+    border-radius: 9px;
+    background-color: var(--gray-btn);
+    transition: all 0.2s ease;
+}
+
+.cancel-btn{
+    background-color: var(--red-btn);
+}
+.confirm-btn{
+    background-color: var(--blue-btn);
+}
+
+.btn:hover{
+    filter: brightness(110%);
+}
+
+.btns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.btns-container .card-btn{
+    padding: 4px;
+    padding-bottom: 1px;
+}
+.btns-container .card-btn svg{
+    fill: var(--btn-icon)
+}
+
+.fav-btn{
+    background-color:var(--fav-btn);
+}
+
+.btns-container .fav-btn svg{
+    fill:var(--not-fav-story-star);
+}
+.fav-story .fav-btn svg{
+    fill:var(--fav-story-star);
+}
+
+.edit-btn{
+    background-color: var(--edit-btn);
+}
+
+.dlt-btn{
+    background-color:  var(--dlt-btn);
+}
+
+input, textarea, select{
+    background-color: var(--input-bg);
+    color: var(--light);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 9px;
+    border: none;
+    padding: 5px;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    box-shadow: 0 0 5px #6bb8ebbb;
+}
+
+input[type="text"], textarea{
+    text-indent: 5px;
+}
+
+input[type="text"]::placeholder, textarea::placeholder{
+    color: var(--light);
+    opacity: 0.6;
+}
+
+textarea{
+    resize: none;
+}
+
+input[type=date], input[type=time] {
+    cursor:text;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator, input[type=time]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    padding: 2px;
+    filter: invert(0.7);
+}
+
+input[type=color]{
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border-radius: 100%;
+}
+input[type=color]::-webkit-color-swatch{
+    border-radius: 100%;
+    border: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+select{
+    cursor: pointer;
+}
+
+.category-color{
+    display: inline-block;
+    border-radius:100%;
+    border:thin solid var(--darker-gray);
+    padding: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #57606e69;
+    border-radius: 10px;
+    border: thin solid #686c79b4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #16191fa4;
+    border-radius: 10px;
+    border: thin solid #65686e;
+}

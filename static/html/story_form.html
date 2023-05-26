@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <title>Flask - Diary App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/story_form.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 id="title" class="title selectable">Flask - Diary App</h2>
+        <div class="page-name"> <span class="page-name-text"></span> </div>
+
+    </header>    
+    
+    <main class="story-form container">
+
+        <form class="story-form-form">
+            <input class="story-form-date datetime" max="2200-12-31"  type="date" name="date" required>
+            <input class="story-form-time datetime" type="time" name="time" required>
+            <input type="text" class="story-form-title text" name="title" placeholder="Título" required> 
+            <textarea class="story-form-description text" name="description" placeholder="Descripción" required></textarea>
+            <div class="story-form-category">
+                <div class="story-form-category-color category-color"></div>
+                <select class="story-form-category-select" name="category_id"></select>
+            </div>
+            <button class="cancel-btn btn" type="button" name="discard">Descartar</button>
+            <input class="confirm-btn btn" type="submit" value="Guardar" name="save">
+        </form>
+
+    </main>
+    
+    <script src="../static/js/common.js"></script>
+    <script src="../static/js/storyForm.js"></script>
+        
+</body>
+
+</html>

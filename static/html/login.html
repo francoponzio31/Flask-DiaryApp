@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <title>Flask - Diary App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/user_form.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1 class="page-title">Flask - Diary App | Iniciar Sesión</h1>
+
+        <section class="login-form container">
+
+            <form class="login-form-form" method="POST">
+                
+                <input type="text" class="login-form-user" name="username" placeholder="Nombre de Usuario" required> 
+                <input type="password" class="login-form-password" name="password" placeholder="Contraseña" required> 
+                
+                <div>
+                    <a class="redirect-link selectable" href="./signup" name="discard">Crear nueva cuenta</a>
+                    <input class="login-btn confirm-btn  btn" type="submit" value="Iniciar sesión" name="save">
+                </div>
+            </form>
+            
+        </section>
+
+    </main>
+            
+</body>
+
+</html>

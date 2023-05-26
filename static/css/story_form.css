@@ -1,0 +1,38 @@
+.story-form {
+    margin:50px;
+    padding:30px;
+}
+
+.story-form-form *{
+    margin: 8px 1px;
+    font-size:medium;
+}
+
+.datetime{
+    padding: 4px 6px;
+}
+
+.text{
+    width: 100%;
+    display: block;
+    padding: 10px 12px;
+}
+
+.story-form-description{
+    height: 160px;
+}
+
+.story-form-category{   
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.story-form-category-color{
+    margin-right: 6px;
+}
+
+.story-form-category-select{
+    padding: 5px 8px;
+}
